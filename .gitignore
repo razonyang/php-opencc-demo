@@ -40,4 +40,4 @@ phpunit.phar
 c3.php
 
 # Composer
-composer.lock
+# composer.lock
