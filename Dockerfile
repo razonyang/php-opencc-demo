@@ -1,5 +1,9 @@
 FROM yiisoftware/yii2-php:8.0-apache
 
+RUN apt update
+
+RUN apt install -y git
+
 ENV APACHE_DOCUMENT_ROOT /app/public
 
 RUN sed -ri -e 's!/app/web!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
